@@ -1,12 +1,12 @@
 // const { getAgePlugin, getUUIDPlugin } = require('../plugins/');
 
-const buildMakePerson = ({ getUUID, getAge }) => {
+const buildMakePerson = ({ getUUIDPlugin, getAgePlugin }) => {
   return ({ name, birthdate }) => {
     return {
-      id: getUUID(),
+      id: getUUIDPlugin(),
       name,
       birthdate,
-      age: getAge(birthdate),
+      age: getAgePlugin(birthdate),
     };
   };
 };
