@@ -3,14 +3,24 @@
 // console.log(emailTemplate);
 // const { getUserById } = require('./jsfoundation/04-arrow');
 // require('./jsfoundation/05-factory')
-const { getAgePlugin, getUUIDPlugin } = require('./plugins');
+//! factory function
+// const { buildMakePerson } = require('./jsfoundation/05-factory');
 
-const { buildMakePerson } = require('./jsfoundation/05-factory');
+// const { getAgePlugin, getUUIDPlugin } = require('./plugins');
 
-const makePerson = buildMakePerson({ getUUIDPlugin, getAgePlugin });
+const getPokemonById = require('./jsfoundation/06-promises');
 
-const obj = { name: 'John', birthdate: '1985-12-21' };
+// getPokemonById(1, (pokemon) => console.log({ pokemon }));
+getPokemonById(1)
+  .then((pokemon) => console.log({ pokemon }))
+  .catch((err) => console.error('Por favor intente de nuevo'))
+  .finally(() => console.log('Finalmente'));
 
-const john = makePerson(obj);
+//! factory function
+// const makePerson = buildMakePerson({ getUUIDPlugin, getAgePlugin });
 
-console.log(john);
+// const obj = { name: 'John', birthdate: '1985-12-21' };
+
+// const john = makePerson(obj);
+
+// console.log(john);
