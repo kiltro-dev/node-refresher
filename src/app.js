@@ -8,13 +8,14 @@
 
 // const { getAgePlugin, getUUIDPlugin } = require('./plugins');
 
-const getPokemonById = require('./jsfoundation/06-promises');
+// const getPokemonById = require('./jsfoundation/06-promises');
 
 // getPokemonById(1, (pokemon) => console.log({ pokemon }));
-getPokemonById(1)
-  .then((pokemon) => console.log({ pokemon }))
-  .catch((err) => console.error('Por favor intente de nuevo'))
-  .finally(() => console.log('Finalmente'));
+
+// getPokemonById(1)
+//   .then((pokemon) => console.log({ pokemon }))
+//   .catch((err) => console.error(err))
+//   .finally(() => console.log('Finalmente'));
 
 //! factory function
 // const makePerson = buildMakePerson({ getUUIDPlugin, getAgePlugin });
@@ -24,3 +25,9 @@ getPokemonById(1)
 // const john = makePerson(obj);
 
 // console.log(john);
+
+const { buildLogger } = require('./plugins');
+
+const logger = buildLogger('app.js');
+
+logger.log('Hola mundo')
