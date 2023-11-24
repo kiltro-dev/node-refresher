@@ -1,5 +1,5 @@
 // console.log(process.env);
 
-const { SHELL, LOGNAME } = process.env;
+export const { SHELL, LOGNAME } = process.env;
 
 console.log(SHELL, LOGNAME);
