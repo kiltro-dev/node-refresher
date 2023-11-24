@@ -1,3 +1,4 @@
+import { buildLogger } from "./plugins/logger.plugin";
 // const { emailTemplate } = require('./jsfoundation/01-template');
 // require('./jsfoundation/02-destructiring')
 // console.log(emailTemplate);
@@ -5,6 +6,7 @@
 // require('./jsfoundation/05-factory')
 //! factory function
 // const { buildMakePerson } = require('./jsfoundation/05-factory');
+
 
 // const { getAgePlugin, getUUIDPlugin } = require('./plugins');
 
@@ -26,7 +28,6 @@
 
 // console.log(john);
 
-const { buildLogger } = require('./plugins');
 
 const logger = buildLogger('app.js');
 

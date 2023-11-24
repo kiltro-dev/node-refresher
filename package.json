@@ -5,13 +5,18 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app",
-    "dev": "nodemon src/app"
+    "dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
   },
   "author": "Ignacio H",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/node": "^20.9.5",
+    "@types/uuid": "^9.0.7",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
   },
   "dependencies": {
     "axios": "^1.6.2",
