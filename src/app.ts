@@ -1,5 +1,5 @@
-import { getPokemonById } from './jsfoundation/06-promises';
-import { buildLogger } from './plugins/logger.plugin';
+// import { getPokemonById } from './jsfoundation/06-promises';
+// import { buildLogger } from './plugins/logger.plugin';
 // const { emailTemplate } = require('./jsfoundation/01-template');
 // require('./jsfoundation/02-destructiring')
 // console.log(emailTemplate);
@@ -14,10 +14,10 @@ import { buildLogger } from './plugins/logger.plugin';
 
 // getPokemonById(1, (pokemon) => console.log({ pokemon }));
 
-getPokemonById(1)
-  .then((pokemon) => console.log({ pokemon }))
-  .catch((err) => console.error(err))
-  .finally(() => console.log('Finalmente'));
+// getPokemonById(1)
+//   .then((pokemon) => console.log({ pokemon }))
+//   .catch((err) => console.error(err))
+//   .finally(() => console.log('Finalmente'));
 
 //! factory function
 // const makePerson = buildMakePerson({ getUUIDPlugin, getAgePlugin });
@@ -28,7 +28,7 @@ getPokemonById(1)
 
 // console.log(john);
 
-const logger = buildLogger('app.js');
+// const logger = buildLogger('app.js');
 
-logger.log('Hola mundo');
-logger.error('Este es un error');
+// logger.log('Hola mundo');
+// logger.error('Este es un error');
