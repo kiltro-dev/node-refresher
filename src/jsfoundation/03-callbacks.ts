@@ -10,7 +10,16 @@ const users: User[] = [
   { id: 2, name: 'Jane Doe' },
 ];
 
-export const getUserById = (id: number, callback: Callback) => {
-  const user = users.find((user) => user.id === id);
-  !user ? callback(`User not found with id ${id}`) : callback(null, user);
-};
+export function getUserById(id: number, callback: Callback) {
+  const user = users.find(function (user) {
+    return user.id === id;
+  });
+
+  if (!user) {
+    setTimeout(() => {
+      callback(`User not found with id ${id}`);
+    }, 1);
+    return;
+  }
+  return callback(null, user);
+}
