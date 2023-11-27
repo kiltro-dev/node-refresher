@@ -16,6 +16,5 @@ describe('jsfoundation/05-factory', () => {
       birthdate: '1985-10-21',
       age: 40,
     });
-    console.log(johnDoe);
   });
 });
